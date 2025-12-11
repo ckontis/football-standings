@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f5f5f5;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.table th {
+  background: #fafafa;
+}
+
+ .qualified-row {
+  background-color: #19ae3c;   /* light green */
+  font-weight: 600;
+}
+
+.qualified-row td {
+  border-color: #33603e;
+}
+
+.layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* left: matches, right: standings */
+.layout-left {
+  flex: 1;          /* narrower column */
+}
+
+.layout-right {
+  flex: 1;          /* or 1.2, 1.5 to make standings wider */
+}
+
+/* Optional: stack on small screens */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+}
