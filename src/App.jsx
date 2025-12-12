@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       <div className="layout">
         <section className="layout-left">
-          <h2>Matches (1 / X / 2)</h2>
+         
           <MatchesTable
             teams={TEAMS}
             matches={matches}
