@@ -66,3 +66,59 @@ section {
     flex-direction: column;
   }
 }
+
+.score-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-box {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.score-btn {
+  width: 28px;
+  height: 32px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.score-btn:active {
+  background: #e0e0e0;
+}
+
+.score-value {
+  min-width: 24px;
+  text-align: center;
+  font-size: 18px;
+  padding: 0 6px;
+}
+
+.score-separator {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* iPhone / small screens */
+@media (max-width: 480px) {
+  .score-btn {
+    width: 30px;
+    height: 34px;
+    font-size: 20px;
+  }
+
+  .score-value {
+    min-width: 26px;
+    font-size: 20px;
+  }
+}
+

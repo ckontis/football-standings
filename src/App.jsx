@@ -10,11 +10,13 @@ function App() {
   const [matches, setMatches] = useState(INITIAL_MATCHES);
   const standings = useStandings(TEAMS, matches);
 
-  const handleResultChange = (matchId, result) => {
-    setMatches(prev =>
-      prev.map(m => (m.id === matchId ? { ...m, result } : m))
-    );
-  };
+  const handleScoreChange = (matchId, homeGoals, awayGoals) => {
+  setMatches(prev =>
+    prev.map(m =>
+      m.id === matchId ? { ...m, homeGoals, awayGoals } : m
+    )
+  );
+};
 
   return (
     <div className="app">
@@ -24,7 +26,7 @@ function App() {
           <MatchesTable
             teams={TEAMS}
             matches={matches}
-            onResultChange={handleResultChange}
+            onScoreChange={handleScoreChange}
           />
         </section>
 
