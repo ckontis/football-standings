@@ -9,7 +9,8 @@ export function calculateStandings(teams, matches) {
       wins: 0,
       draws: 0,
       losses: 0,
-      points: team.initialPoints ?? 0
+      points: team.initialPoints ?? 0,
+      gd: team.gd
     });
   });
 
@@ -40,7 +41,12 @@ export function calculateStandings(teams, matches) {
   });
 
   return Array.from(table.values()).sort((a, b) => {
-    if (b.points !== a.points) return b.points - a.points;
+    if (b.points !== a.points) {
+      return b.points - a.points;
+    }
+    if (b.gd !== a.gd) {
+      return b.gd - a.gd;
+    }
     return a.name.localeCompare(b.name);
   });
 }

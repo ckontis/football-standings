@@ -19,6 +19,7 @@ function StandingsTable({ standings }) {
           <th>D</th>
           <th>L</th>
           <th>Pts</th>
+          <th>GD</th>
         </tr>
       </thead>
       <tbody>
@@ -30,7 +31,8 @@ function StandingsTable({ standings }) {
             <td>{row.wins}</td>
             <td>{row.draws}</td>
             <td>{row.losses}</td>
-            <td>{row.points}</td>
+            <td style={{ fontSize: '18px' }}>{row.points}</td>
+            <td>{row.gd}</td>
           </tr>
         ))}
       </tbody>
