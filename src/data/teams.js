@@ -20,7 +20,7 @@ export const TEAMS = [
     { id: 22, name: "Leverkusen", initialPoints: 4 },
     { id: 23, name: "Atletico Madrid", initialPoints: 4 },
     { id: 24, name: "Kairat", initialPoints: 4 },
-    { id: 25, name: "Marseille", initialPoints: 4 },
+    { id: 25, name: "Marseille", initialPoints: 9, gd: 2 },
     { id: 27, name: "Monaco", initialPoints: 9, gd:-6 },
     { id: 28, name: "Ajax", initialPoints: 6, gd: -12 },
     { id: 29, name: "Bodo Glimt", initialPoints: 6, gd: -2 },

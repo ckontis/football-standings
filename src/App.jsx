@@ -33,6 +33,7 @@ function App() {
 
         <section className="layout-right">
           <h2>Standings</h2>
+          <p style={{ color: 'green', fontSize: '14px', fontStyle: 'italic' }}>Teams with a green background will qualify for the next round, along with all teams currently on 10+ points, and Bayer Leverkusen.</p>
           <StandingsTable standings={standings} />
         </section>
       </div>
