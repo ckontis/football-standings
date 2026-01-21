@@ -24,7 +24,7 @@ function StandingsTable({ standings }) {
       </thead>
       <tbody>
         {visibleStandings.map((row, index) => (
-          <tr key={row.teamId} className={index < 5 ? "qualified-row" : ""}>
+          <tr key={row.teamId} className={index < 4 ? "qualified-row" : ""}>
             <td>{index + 1}</td>
             <td>{row.name}</td>
             <td>{row.played}</td>
