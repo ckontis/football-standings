@@ -2,7 +2,7 @@ import React from "react";
 
 function StandingsTable({ standings }) {
 
-  const filtered = standings.filter(row => row.teamId >= 1 && row.teamId <= 11 || row.teamId > 24);
+  const filtered = standings.filter(row => (row.teamId >= 1 && row.teamId <= 11) || row.teamId > 24);
 
   // if you also want to limit to 11 rows, you can still slice:
   // const visibleStandings = filtered.slice(0, 11);
@@ -20,6 +20,8 @@ function StandingsTable({ standings }) {
           <th>L</th>
           <th>Pts</th>
           <th>GD</th>
+          <th>GF</th>
+          <th>GA</th>
         </tr>
       </thead>
       <tbody>
@@ -33,6 +35,8 @@ function StandingsTable({ standings }) {
             <td>{row.losses}</td>
             <td style={{ fontSize: '18px' }}>{row.points}</td>
             <td>{row.gd}</td>
+            <td>{row.goalsFor}</td>
+            <td>{row.goalsAgainst}</td>
           </tr>
         ))}
       </tbody>

@@ -9,8 +9,8 @@ export function calculateStandings(teams, matches) {
       wins: 0,
       draws: 0,
       losses: 0,
-      goalsFor: 0,
-      goalsAgainst: 0,
+      goalsFor: team.goalsFor ?? 0,
+      goalsAgainst: team.goalsAgainst ?? 0,
       points: team.initialPoints ?? 0,
       gd: team.gd ?? 0
     });
@@ -59,6 +59,7 @@ matches.forEach(match => {
   return Array.from(table.values()).sort((a, b) => {
     if (b.points !== a.points) return b.points - a.points;
     if ((b.gd ?? 0) !== (a.gd ?? 0)) return (b.gd ?? 0) - (a.gd ?? 0);
+    if (b.goalsFor !== a.goalsFor) return b.goalsFor - a.goalsFor;
     return a.name.localeCompare(b.name);
   });
 }
