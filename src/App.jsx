@@ -5,6 +5,7 @@ import { useStandings } from "./hooks/useStandings";
 import MatchesTable from "./components/MatchesTable";
 import StandingsTable from "./components/StandingsTable";
 import "./styles/app.css";
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const [matches, setMatches] = useState(INITIAL_MATCHES);
